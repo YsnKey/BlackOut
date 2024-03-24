@@ -56,7 +56,6 @@ public class BlackOut extends MeteorAddon {
         modules.add(new AutoMine());
         modules.add(new AutoMoan());
         modules.add(new AutoPearl());
-        initializeAutoPVP(modules);
         modules.add(new AutoTrapPlus());
         modules.add(new BedAuraPlus());
         modules.add(new Blocker());
@@ -77,7 +76,6 @@ public class BlackOut extends MeteorAddon {
         modules.add(new MineESP());
         modules.add(new OffHandPlus());
         modules.add(new PacketFly());
-        modules.add(new PacketLogger());
         modules.add(new PingSpoof());
         modules.add(new PistonCrystal());
         modules.add(new PistonPush());
@@ -123,12 +121,6 @@ public class BlackOut extends MeteorAddon {
         hud.register(CatGirl.INFO);
     }
 
-    private void initializeAutoPVP(Modules modules) {
-        try {
-            Class.forName("baritone.api.BaritoneAPI");
-            modules.add(new AutoPvp());
-        } catch (ClassNotFoundException ignored) {}
-    }
 
     @Override
     public void onRegisterCategories() {
